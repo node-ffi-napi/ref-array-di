@@ -1,7 +1,7 @@
 
 var assert = require('assert')
   , ref = require('ref')
-  , ArrayType = require('../')
+  , ArrayType = require('../')(ref)
   , bindings = require('bindings')({ module_root: __dirname, bindings: 'native_tests' })
 
 describe('Array', function () {

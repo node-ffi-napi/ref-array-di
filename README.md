@@ -1,12 +1,19 @@
-ref-array
-=========
+ref-array-di
+============
 ### Create C typed "array" instances on top of Buffers
-[![Build Status](https://secure.travis-ci.org/TooTallNate/ref-array.svg)](https://travis-ci.org/TooTallNate/ref-array)
-[![Build Status](https://ci.appveyor.com/api/projects/status/auxk791h56hbughd?svg=true)](https://ci.appveyor.com/project/TooTallNate/ref-array)
 
+[![NPM Version](https://img.shields.io/npm/v/ref-array-di.svg?style=flat)](https://npmjs.org/package/ref-array-di)
+[![NPM Downloads](https://img.shields.io/npm/dm/ref-array-di.svg?style=flat)](https://npmjs.org/package/ref-array-di)
+[![Build Status](https://travis-ci.org/node-ffi-napi/ref-array-di.svg?style=flat&branch=master)](https://travis-ci.org/node-ffi-napi/ref-array-di?branch=master)
+[![Coverage Status](https://coveralls.io/repos/node-ffi-napi/ref-array-di/badge.svg?branch=master)](https://coveralls.io/r/node-ffi-napi/ref-array-di?branch=master)
+[![Dependency Status](https://david-dm.org/node-ffi-napi/ref-array-di.svg?style=flat)](https://david-dm.org/node-ffi-napi/ref-array-di)
 
 This module offers an "array" implementation on top of Node.js Buffers using
 the ref "type" interface.
+
+**Note**: The only difference to `ref-array` is that this module takes its
+dependency on `ref` via dependency injection, so that it is easier to use
+e.g. `ref-napi` instead.
 
 Installation
 ------------
@@ -14,7 +21,7 @@ Installation
 Install with `npm`:
 
 ``` bash
-$ npm install ref-array
+$ npm install ref-array-di
 ```
 
 
@@ -25,7 +32,7 @@ Examples
 
 ``` js
 var ref = require('ref')
-var ArrayType = require('ref-array')
+var ArrayType = require('ref-array-di')(ref)
 
 // typedef
 var int = ref.types.int
