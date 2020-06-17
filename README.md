@@ -66,7 +66,7 @@ b[4] // 5
 
 ``` js
 // sometimes you get a variable length array that is terminated by a NULL byte.
-var buf = new Buffer(int.size * 3)
+var buf = Buffer.alloc(int.size * 3)
 int.set(buf, int.size * 0, 5)
 int.set(buf, int.size * 1, 8)
 int.set(buf, int.size * 2, 0) // <- terminate with 0s
