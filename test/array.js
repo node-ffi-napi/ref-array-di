@@ -16,7 +16,7 @@ describe('Array', function () {
     var CharArray = ArrayType('char')
 
     it('should map directly to a "string"', function () {
-      var b = Buffer.alloc('hello', 'ascii')
+      var b = Buffer.from('hello', 'ascii')
       var a = new CharArray(b)
       assert.equal(b.length, a.length)
       for (var i = 0; i < b.length; i++) {
